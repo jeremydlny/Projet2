@@ -1,0 +1,766 @@
+/* ------Début Class Général---------- */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+header,main{
+    padding: 0 20px;
+}
+/* ------Fin Class Général---------- */
+/* ------Début Class Réutilisable---------- */
+
+.titre-section {
+    margin: 1em 0;	
+}
+
+/* ------Fin Class Réutilisable---------- */
+/* ------Début Class Header---------- */
+header {
+	display: flex;
+	flex-flow: row nowrap;
+	align-content: center;
+	align-items: center;
+	justify-content: space-between;
+	height: 65px;
+}
+
+h1{
+    font-size: 20px;
+    margin-top: 20px;
+    padding-top: 25px;
+    padding-left: 20px;
+}
+
+h2 {
+	font-size: 20px;
+    padding-bottom: 30px;
+}
+
+header nav {
+	height: 100%;
+}
+
+header a {
+	height: 80%;
+}
+
+.logoBooki{
+    position: relative;
+    top:20px;
+    left:30px;
+    width: 50%;
+    display: flex;
+    padding-top: 15px;
+}
+
+.menu {
+	display: flex;
+	flex-flow: unset;
+	height: 100%;
+}
+
+.menu li a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    color:#d0d0d2;
+    text-decoration: none;
+    padding: 0 30px;
+    border-top: 2px #ffffff solid;
+    font-size: 14px;
+}
+
+.menu li a:hover{
+    color: #0065FC;
+    border-top: 2px #0065FC solid;
+}
+
+.menu li a:hover, .menu li a.active {
+	color:#0065FC;
+	border-top: 2px #0065FC solid;
+}
+
+.menu li a {
+    color: black;
+}
+
+/* ------Fin Class Header---------- */
+/* ------Début Class Main---------- */
+main {
+    display: grid;
+    grid-template-columns: 6fr 3fr;
+    grid-gap: 20px;
+}
+
+/* ------Début SectionRechercher--------- */
+.SectionRechercher {
+    grid-row: 1/2;
+    font-size: 12px;
+}
+
+.SectionRechercher form {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 15px 0;
+    padding-left: 20px ;
+}
+
+.SectionRechercher input {
+    border: 2px solid #efefef;
+    padding: 10px 15px;
+    font-weight: bold;
+    width: 12em;
+}
+
+input:focus {
+    outline: none;
+}
+
+.SectionRechercher button {
+    border: none;
+    border-radius: 0 10px 10px 0;
+    display: inline-block;
+    padding: 9px 15px;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    background-color: #0065FC;
+    border: 2px solid #0065FC;
+}
+.SectionRechercher .buttonrechercher2{
+    display: none;
+}
+
+.SectionRechercher button:hover {
+    color: #0065FC;
+    background-color: white; 
+}
+
+.SectionRechercher .geo { 
+    border: none;
+    border-radius: 10px 0 0 10px;
+    display: inline-block;
+    padding: 11px 15px;
+    font-size: 14px;
+    color: black;
+    background-color: #efefef;
+    border: 2px solid #efefef;
+}
+
+.SectionRechercher p {
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.Filtres {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 20px;
+    font-size: 14px;
+}
+
+.Filtres {
+    margin-left: 20px;
+}
+
+.Filtres h2 {
+    font-size: 14px;
+}
+
+.Filtres ul {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+}
+
+.Filtres .btn {
+    position: relative;
+    display: inline-block;
+    padding: 0 15px 0 10px;
+    border: 2px solid #efefef;
+    border-radius: 30px;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+
+.Filtres .btn:hover {
+    color: #0065FC;
+    background-color: #d6e7ff;
+    border-color: #d6e7ff;
+}
+
+.Filtres .btn:before {
+    display: inline-block;
+    position: relative;
+    right: 10px;
+    padding: 10px;
+    line-height: 1;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #0065FC;
+    background-color: #d6e7ff;
+    border-radius: 50%;
+    outline: #d6e7ff 3px solid;
+    outline-offset: -1px;
+}
+
+.Filtres .icon-money:before {
+    content: "\f53a";
+    padding: 10px 8.5px;
+}
+
+.Filtres .icon-child:before {
+    content: "\f1ae";
+    padding: 10px 12px;
+}
+
+.Filtres .icon-heart:before {
+    content: "\f004";
+}
+
+.Filtres .icon-dog:before {
+    content: "\f6d3";
+}
+
+.SectionRechercher p.icon-info {
+    margin: 20px 0 0 0;
+    padding: 0 0 0 40px;
+}
+
+.SectionRechercher .icon-info:before {
+    display: inline-block;
+    position: relative;
+    bottom: 1px;
+    right: 25px;
+    margin: 0 -18px 0 0;
+    padding: 3px 6px;
+    font-family: "Font Awesome 5 Free";
+    font-size: 10px;
+    font-weight: 900;
+    line-height: 1;
+    content: "\f129";
+    color: #0065FC;
+    background-color: #ffffff;
+    border: 1px solid #efefef;
+    border-radius: 50%;
+}
+
+/* ------Fin SectionRechercher--------- */
+/* ------Début SectionHebergement--------- */
+.SectionHebergement{
+    grid-row: 2;
+    padding: 20px;
+    padding-left: 35px;
+    background-color: #efefef;
+    border-radius:20px;
+}
+
+.SectionHebergement ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 45px;
+}
+
+.SectionHebergement ul li a {
+    padding: 7px;
+    height: 100%;
+    display: block;
+    box-sizing: border-box;
+    color: #d0d0d2;
+    background-color: #ffffff;
+    border-radius: 20px;
+    transition: all 0.3s;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+}
+
+.SectionHebergement ul li a:hover{
+    background-color: #d6e7ff;
+    box-shadow: 0 30px 20px rgb(0, 0, 0, 0.3);
+    transform: translateY(-10px);
+}
+
+.SectionHebergement .hotel-photo{
+    height: 10em;
+}
+
+.SectionHebergement h3 {
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    text-align: center;
+    color:black;
+    text-align: left;
+}
+
+.SectionHebergement p {
+    font-size: 16px;
+    padding-bottom: 5px;
+    text-align: center;
+    color:black;
+    text-align: left;
+}
+.SectionHebergement .hotel-photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.SectionHebergement button{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 30px;
+    border-style: none;
+    color: black;
+    font-weight: bold;
+}
+
+.SectionHebergement img {
+    width: 100%;
+}
+
+.hotel-info{
+    padding-left: 10px;
+}
+
+.fa{
+    color:#d0d0d2;
+}
+
+.checked {
+    color: #0065FC;
+}
+/* ------Fin SectionHebergement--------- */
+/* ------Début SectionLesPlusPopulaires--------- */
+.SectionLesPlusPopulaires{
+    grid-row-start: 2;
+    padding: 20px;
+    background-color: #efefef;
+    border-radius: 20px;
+}
+
+.SectionLesPlusPopulaires .hotel-cartes {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 2.5rem;
+}
+
+.SectionLesPlusPopulaires ul li a {
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    border-radius: 20px;
+    justify-content: flex-start;
+    position: relative;
+    padding: 7px;
+    color: #d0d0d2;
+    transition: all 0.3s;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+} 
+
+.SectionLesPlusPopulaires ul li a:hover{
+    background-color: #d6e7ff;
+    box-shadow: 0 30px 20px rgb(0, 0, 0, 0.3);
+    transform: translateY(-10px);
+}
+
+.SectionLesPlusPopulaires .titre-section i {
+    float: right;
+}
+
+.SectionLesPlusPopulaires ul li {
+    margin-top: -25px;
+}
+
+.SectionLesPlusPopulaires .hotel-photo {
+    width: 40%;
+    height: 10em;
+}
+
+.SectionLesPlusPopulaires .hotel-info {
+    width: 60%;
+    padding: 1.2em;
+    font-size: 0.85em;
+}
+
+.SectionLesPlusPopulaires .hotel-photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px 0px 0px 15px;
+}
+
+.SectionLesPlusPopulaires h3 {
+    font-size: 14px;
+    text-align: center;
+    color:black;
+    text-align: left;
+}
+
+.SectionLesPlusPopulaires p {
+    font-size: 14px;
+    text-align: center;
+    color:black;
+    text-align: left;
+}
+
+.SectionLesPlusPopulaires a:hover,
+.SectionLesPlusPopulaires a:hover h3,
+.SectionLesPlusPopulaires a:hover p,
+.SectionLesPlusPopulaires a:hover span.checked {
+    color:#0065FC;
+}
+
+.populaire-stars {
+    position: absolute;
+    bottom: 20px;
+
+}
+/* ------Fin SectionLesPlusPopulaires--------- */
+.SectionActivites{
+    grid-row: 3;
+    grid-column: 1/3;
+    margin: 0 0 3em;
+}
+
+.SectionActivites ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5,5em);
+    gap: 2.5em;
+}
+
+.SectionActivites ul .carte-type1{
+    grid-row: 1/6;
+}
+
+.SectionActivites ul .carte-type2{
+    grid-row: 1/4;
+}
+
+.SectionActivites ul .carte-type3{
+    grid-row: 4/6;
+}
+
+.SectionActivites ul .carte-type4{
+    grid-row: 1/3;
+}
+
+.SectionActivites ul .carte-type5{
+    grid-row: 3/6;
+}
+
+.SectionActivites a img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+    overflow: hidden;
+}
+
+.SectionActivites ul li a {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+    transition: all 0.3s;
+} 
+
+.SectionActivites ul li a h3{
+    padding: 10px;
+    margin: 0;
+    color: black;
+}
+
+.SectionActivites a:hover,
+.SectionActivites a:hover h3 {
+    color:#0065FC;
+}
+
+.SectionActivites a:hover {
+    background-color: #d6e7ff;
+    box-shadow: 0 30px 20px rgb(0, 0, 0, 0.3);
+    transform: translateY(-10px);
+}
+/* ------Fin Class Main---------- */
+
+/* ------Début Class Footer---------- */
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 2.5em;
+    background-color: #efefef;
+    gap:2.5em;
+}
+
+footer h3 {
+    margin: 0 0 0.5em;
+}
+
+footer li {
+    padding: 0.5em 0;
+    font-size: 0.85em;
+}
+
+footer li a {
+	color:black;
+}
+
+footer li a:hover {
+	color:#0065FC;
+}
+/* ------Fin Class Footer---------- */
+
+/* Media queries */
+/* Desktop */
+@media (max-width: 992px) { 
+    .SectionRechercher {
+        grid-column: 1/3;
+        padding: 0 2em;
+    }
+    .SectionLesPlusPopulaires {
+        grid-row-start: 2;
+        grid-column: 1/3;
+        padding: 2em;
+    }
+    .SectionHebergement{
+        grid-row-start: 3;
+        grid-column: 1/3;
+        padding: 2em;
+    }
+    .SectionActivites{
+        grid-row-start: 4;
+    }
+
+}
+/* Tablette */
+@media (max-width: 811px) { 
+
+    .SectionHebergement {
+		grid-row-start: 3;
+		grid-column: 1/3;
+		padding: 2em;
+	}
+
+	.SectionHebergement .hotel-cartes {
+        grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, auto);
+		gap: 2em;
+	}
+
+	.SectionHebergement .hotel-photo {
+		height: 5em;
+	}
+
+    .SectionActivites ul{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3,10em);
+    }
+
+    .SectionActivites ul .carte-type1,
+    .SectionActivites ul .carte-type2,
+    .SectionActivites ul .carte-type3,
+    .SectionActivites ul .carte-type4,
+    .SectionActivites ul .carte-type5{
+        grid-row: auto;
+    }
+   
+    
+}
+/* Téléphone */
+@media (max-width: 480px) {
+
+    main {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+
+    header{
+        display: inline;
+    }
+
+    header .logoBooki{
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        top: 0px;
+        left: 0px;
+        margin: 0 auto;
+        width: 25%;
+        display: flex;
+        padding: 10px;
+    }
+
+    nav{
+        width: 100%;
+
+    }
+
+    h1{
+        font-size: 20px;
+        margin-top: 0px;
+        padding-top: 25px;
+        padding-left: 0px;
+    }
+
+    .menu {
+        display: flex;
+        width: 100%;
+    }
+
+    .menu li {
+        width: 100%;
+    }
+
+    .menu li a{
+        display: flex;
+		flex-direction: row;
+		justify-content: center;
+		color: #d0d0d2;
+		text-decoration: none;
+		padding: 0.3em 0;
+		border:none;
+		border-bottom: 2px #d0d0d2 solid;
+		font-size: 0.85em;
+    }
+
+    
+    .menu li a:hover, .menu li a.active {
+		color:#0065FC;
+		border: none;
+		border-bottom: 2px #0065FC solid;
+    }
+
+
+    .Filtres h2 {
+        padding-top: 10px;
+        padding-bottom: 0px;
+    }
+
+    .SectionRechercher p {
+        padding-left: 0px;
+    }
+
+    .SectionRechercher form {
+        padding-left: 0px ;
+    }
+
+    .Filtres {
+        margin-left: 0px;
+    }
+
+	.SectionHebergement .hotel-cartes {
+        grid-template-columns: auto;
+	}
+
+    .SectionRechercher .buttonrechercher1{
+        display: none;
+    }
+
+    .SectionRechercher .buttonrechercher2 {
+        position: relative;
+        right: 20px;
+        display: block;
+        color: #ffffff;
+        background-color: #0065FC;
+        border: none;
+        border-radius: 13px 13px 13px 13px;
+        display: inline-block;
+        padding: 11px 15px;
+        font-size: 14px;
+        border: 2px solid #efefef;
+    
+    }
+
+    .SectionRechercher .buttonrechercher2:hover {
+        color: #0065FC;
+        background-color: #FFF;
+    }
+
+
+    .SectionRechercher p.icon-info {
+        padding-left: 25px;
+    }
+
+    .SectionRechercher {
+        padding: 0 1em;
+    }    
+
+    .SectionHebergement .hotel-photo {
+        height: 7em;
+	}
+
+    .SectionHebergement{
+        padding: 1em;
+        padding-top: 0px;
+        background-color: #ffffff;
+    }
+
+    .SectionHebergement h2{
+        padding-bottom: 0px;
+    }
+
+    .SectionHebergement button {
+        background: white;
+    }
+
+    .SectionHebergement .hotel-cartes {
+        gap: 1em;
+    }
+
+    .SectionHebergement ul li a {
+        padding: 5px;
+    }
+
+    .SectionLesPlusPopulaires {
+        padding: 1em;
+        border-radius: 0px;
+    }
+
+    .SectionLesPlusPopulaires .hotel-photo {
+        width: 50%;
+        height: 8em;
+    }
+
+    .SectionLesPlusPopulaires .hotel-info {
+        width: 50%;
+    }
+
+    .SectionLesPlusPopulaires ul li a {
+        padding: 5px;
+    }
+
+    .SectionActivites {
+        padding: 1em;
+        margin-bottom: 0px;
+    }
+
+    .SectionActivites h2{
+        padding-bottom: 0px;
+    }
+
+    .SectionActivites ul{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6,10em);
+        gap: 1em;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+    }
+}
